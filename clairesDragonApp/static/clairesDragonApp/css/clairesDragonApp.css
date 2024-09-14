@@ -1,0 +1,58 @@
+body {
+    background-color: #86B8E7;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    color: #050315;
+--primary: #bd86ee;
+--secondary: #d8bcf0;
+--accent: #e5fffa;
+}
+
+button {
+    background-color: #bd86ee;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Cardo', serif;
+}
+
+
+.cardo-regular {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.cardo-bold {
+font-family: "Cardo", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.cardo-regular-italic {
+font-family: "Cardo", serif;
+font-weight: 400;
+font-style: italic;
+}
+  
+
+/* 
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: ;
+    font-style: normal;
+  } */

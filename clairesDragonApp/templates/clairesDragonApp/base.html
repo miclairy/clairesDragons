@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'clairesDragonApp/css/clairesDragonApp.css' %}">
+    <head>
+        <title>Claire's Dragons </title>
+    </head>
+<body>
+    <h1> Dragons here soon!</h1>
+    <button> 
+        <a href="{% url 'create' %}"> Create a dragon {% include "./icons/dragonIcon.svg" %}</a> 
+    </button>
+    <button> <a href="{% url 'about' %}"> Learn about Claire </a> </button>
+    <img src"static/clairesDragonApp/images/purpleDragon.png"/>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

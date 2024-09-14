@@ -1,6 +1,4 @@
 from django.db import models
-from django.conf import settings
-from django.utils import timezone
 
 # Create your models here.
 
@@ -17,6 +15,7 @@ class Dragon(models.Model):
     feathers = models.BooleanField()
     wings = models.BooleanField()
     legs = models.IntegerField()
+    # url = models.CharField(max_length=200) # todo generate button for dragons etc
     
 
     def generate(self):

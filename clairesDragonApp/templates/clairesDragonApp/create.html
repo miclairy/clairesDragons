@@ -1,0 +1,9 @@
+{% extends 'clairesDragonApp/base.html' %}
+
+{% block content %}
+<h2> Create a baby dragon </h2>
+<form method="POST" class='post-form'> {% csrf_token %}
+    {{ dragonForm.as_p }}
+    <button type='sbumit'> Generate </button>
+</form> 
+{% endblock %}
