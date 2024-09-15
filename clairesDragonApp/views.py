@@ -22,10 +22,12 @@ def about(request) :
 
 def create(request):
     form = DragonForm()
+    url = ''
     if (request.method == "POST"):
         form = DragonForm(request.POST)
         if (form.is_valid()):
             dragon = form.save(commit=True)
-            generate(dragon)
+            url = generate(dragon)
+            #url = 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-9pMbbb61J0DDJ6qYQu5oefM4/user-K6Ykb8YL2njruV5ShTW872d3/img-0QD0lwQFZkBJbLQneIieehKO.png?st=2024-09-15T16%3A28%3A49Z&se=2024-09-15T18%3A28%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-09-14T23%3A21%3A15Z&ske=2024-09-15T23%3A21%3A15Z&sks=b&skv=2024-08-04&sig=kwCRk/sv8Qqn0C1nmmmjqMJv1B7UNVK58pZwJHH6QVw%3D' # generate(dragon)
             
-    return render(request, 'clairesDragonApp/create.html', {'dragonForm': form})
+    return render(request, 'clairesDragonApp/create.html', {'dragonForm': form, 'dragonUrl': url})

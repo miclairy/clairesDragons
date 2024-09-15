@@ -4,6 +4,11 @@
 <h2> Create a baby dragon </h2>
 <form method="POST" class='post-form'> {% csrf_token %}
     {{ dragonForm.as_p }}
-    <button type='sbumit'> Generate </button>
+    <button> Generate </button>
+    {% if dragonUrl %}
+    <p>See your dragon: {{ dragonUrl }}</p>
+    <img src={{dragonUrl}}></img>
+    {% endif %}
+
 </form> 
 {% endblock %}
