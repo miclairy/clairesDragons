@@ -6,9 +6,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
-client = OpenAI(
-    api_key = os.environ.get("OPENAI_API_KEY"),
-)
+
 
 class Breath(Enum):
     WATER = 'water'
@@ -30,7 +28,9 @@ def boolToText(value):
     return value if 'there are' else 'there are not any'
 
 def generate(dragon):
-
+    client = OpenAI(
+        api_key = os.environ.get("OPENAI_API_KEY"),
+    )
     response = client.images.generate( 
         model="dall-e-3",
         prompt=f"a realistic {dragon.color} dragon with {dragon.legs} legs that breathes {whatDoesItBreathe(dragon.fireBreather, dragon.waterBreather)}, they have {dragon.eyeColor} colored eyes and {dragon.horns} horns and {boolToText(dragon.fins)} fins and {boolToText(dragon.feathers)} feathers.",
