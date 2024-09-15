@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
-OPENAI = os.getenv('OPENAI_API_KEY')
-
-client = OpenAI(api_key=OPENAI)
+client = OpenAI(
+    api_key = os.environ.get("OPENAI_API_KEY"),
+)
 
 class Breath(Enum):
     WATER = 'water'
