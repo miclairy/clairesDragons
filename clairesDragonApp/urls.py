@@ -7,4 +7,3 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('create', views.create, name='create')
 ]
-urlpatterns += staticfiles_urlpatterns()
