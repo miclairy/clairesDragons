@@ -1,10 +1,14 @@
 from enum import Enum
+import os
 
 from django.shortcuts import redirect
+from dotenv import load_dotenv
 from openai import OpenAI
 
+load_dotenv()
+OPENAI = os.getenv('OPENAI_API_KEY')
 
-client = OpenAI()
+client = OpenAI(api_key=OPENAI)
 
 class Breath(Enum):
     WATER = 'water'
