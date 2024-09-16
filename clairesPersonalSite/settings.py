@@ -30,7 +30,6 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
-TAILWIND_APP_NAME = 'clairesDragonApp'
 
 # Application definition
 
@@ -41,9 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tailwind',
     'clairesDragonApp',
-    'django_browser_reload'
 ]
 
 MIDDLEWARE = [
