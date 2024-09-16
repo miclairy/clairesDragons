@@ -1,16 +1,26 @@
 {% extends 'clairesDragonApp/base.html' %}
 
 {% block content %}
-<div class='container'>
-    <h2> Create a dragon </h2>
-    <form method="POST" class='post-form'> {% csrf_token %}
-        {{ dragonForm.as_p }}
-        <button> Generate </button>
-        {% if dragonUrl %}
-            <h2>Your dragon: </h2>
-            <img src={{dragonUrl}}></img>
-        {% endif %}
+<div class='font-sans lg:mx-20 bg-purple-light p-2 rounded-lg mb-10'>
+    <h2 class='text-2xl pb-2'> Create a dragon </h2>
+    <h3 class='text-xl'> Do you love dragons? Use this free dragon maker to make your very own dragons and other beautiful monsters. ❤️ </h3>
+    <p>Powered By openAI</p>
+    {% comment %} <p>See your dragon: {{ dragonUrl }}</p> {% endcomment %}
 
-    </form> 
+    <div class='lg:flex pt-4'>
+        <form method="POST" class='flex flex-col gap-2 grow pl-2'> 
+            {% csrf_token %}
+            {{ dragonForm.as_div }}
+            <button class='bg-pink rounded-lg my-4 mx-4 p-4 px-8 hover:bg-purple grow'> Generate </button>
+
+        </form> 
+        <div class='lg:w-1/2'>
+            {% if dragonUrl %}
+                <img  src={{dragonUrl}}></img>
+            {% endif %}
+        </div>
+
+    </div>
+
 </div>
 {% endblock %}
