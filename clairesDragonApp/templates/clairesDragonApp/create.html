@@ -8,10 +8,10 @@
     {% comment %} <p>See your dragon: {{ dragonUrl }}</p> {% endcomment %}
 
     <div class='lg:flex pt-4'>
-        <form method="POST" class='flex flex-col gap-2 grow pl-2'> 
+        <form method="POST" class='flex flex-col gap-2 grow pl-2' onsubmit="disableButton()"> 
             {% csrf_token %}
             {{ dragonForm.as_div }}
-            <button class='bg-pink rounded-lg my-4 mx-4 p-4 px-8 hover:bg-purple grow'> Generate </button>
+            <button id='generate-btn' class='bg-pink rounded-lg my-4 mx-4 p-4 px-8 hover:bg-purple grow'> Generate </button>
 
         </form> 
         <div class='lg:w-1/2'>
