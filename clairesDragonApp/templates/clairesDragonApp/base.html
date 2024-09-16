@@ -12,12 +12,14 @@
         <title>Claire's Dragons </title>
     </head>
 <body>
-    <h1> Dragons here soon!</h1>
-    <button> 
-        <a href="{% url 'create' %}"> Create a dragon {% include "./icons/dragonIcon.svg" %}</a> 
-    </button>
-    <button> <a href="{% url 'about' %}"> Learn about Claire </a> </button>
-    <img src"static/clairesDragonApp/images/purpleDragon.png"/>
+    <div class='container'>
+        <h1> Dragons here soon!</h1>
+        <button> 
+            <a href="{% url 'create' %}"> Create a dragon {% include "./icons/dragonIcon.svg" %}</a> 
+        </button>
+        <button> <a href="{% url 'about' %}"> Learn about Claire </a> </button>
+        <img src"static/clairesDragonApp/images/purpleDragon.png"/>
+    </div>
     {% block content %}
     {% endblock %}
 </body>

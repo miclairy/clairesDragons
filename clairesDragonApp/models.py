@@ -1,11 +1,9 @@
 from django.db import models
 
-# Create your models here.
-
 class Dragon(models.Model):
     name = models.CharField(max_length=20)
     color = models.CharField(max_length=10)
-    terrian = models.CharField(max_length=10)
+    terrain = models.CharField(max_length=10)
     fireBreather = models.BooleanField()
     waterBreather = models.BooleanField()
     eyeColor = models.CharField(max_length=10)
@@ -15,8 +13,7 @@ class Dragon(models.Model):
     feathers = models.BooleanField()
     wings = models.BooleanField()
     legs = models.IntegerField()
-    # url = models.CharField(max_length=200) # todo generate button for dragons etc
-    
+    url = models.CharField(max_length=200)
 
     def generate(self):
         self.save()
@@ -24,5 +21,4 @@ class Dragon(models.Model):
     def __str__(self):
         return self.name
         
-    
     

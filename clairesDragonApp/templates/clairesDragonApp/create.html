@@ -1,14 +1,16 @@
 {% extends 'clairesDragonApp/base.html' %}
 
 {% block content %}
-<h2> Create a baby dragon </h2>
-<form method="POST" class='post-form'> {% csrf_token %}
-    {{ dragonForm.as_p }}
-    <button> Generate </button>
-    {% if dragonUrl %}
-    <p>See your dragon: {{ dragonUrl }}</p>
-    <img src={{dragonUrl}}></img>
-    {% endif %}
+<div class='container'>
+    <h2> Create a dragon </h2>
+    <form method="POST" class='post-form'> {% csrf_token %}
+        {{ dragonForm.as_p }}
+        <button> Generate </button>
+        {% if dragonUrl %}
+            <h2>Your dragon: </h2>
+            <img src={{dragonUrl}}></img>
+        {% endif %}
 
-</form> 
+    </form> 
+</div>
 {% endblock %}

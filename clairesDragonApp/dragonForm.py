@@ -8,7 +8,7 @@ class DragonForm(forms.ModelForm):
         model = Dragon
         fields = ('name', 
                   'color', 
-                  'terrian', 
+                  'terrain', 
                   'fireBreather', 
                   'waterBreather', 
                   'eyeColor', 
