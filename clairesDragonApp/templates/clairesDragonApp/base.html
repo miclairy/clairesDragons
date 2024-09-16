@@ -1,5 +1,5 @@
-{% comment %} {% load static %} {% endcomment %}
-{% load static tailwind_tags %}
+{% load static %}
+{% comment %} {% load static tailwind_tags %} {% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -19,11 +19,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        {% comment %} <link rel="stylesheet" href="{% static 'clairesDragonApp/css/clairesDragonApp.css' %}"> {% endcomment %}
-        {% tailwind_css %}
+        <link rel="stylesheet" href="{% static 'clairesDragonApp/css/clairesDragonApp.css' %}">
+        {% comment %} {% tailwind_css %} {% endcomment %}
         <title>Claire's Dragons</title>
     </head>
-	<body class="bg-gradient-to-r from-blue-light to-pink-light ... font-serif leading-normal tracking-normal">
+	<body class="bg-gradient-to-r from-blue-light to-pink-light font-serif leading-normal tracking-normal">
     <div class='font-sans'>
         <h1 class='text-5xl font-serif p-4 text-center'> Claire's Dragons here soon!</h1>
         <div class='flex gap-2 items-center place-content-center'>

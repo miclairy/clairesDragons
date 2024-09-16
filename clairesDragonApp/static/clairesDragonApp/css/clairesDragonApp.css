@@ -1,62 +1,179 @@
-body {
-    background-color: #86B8E7;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-
-    color: #050315;
---primary: #bd86ee;
---secondary: #d8bcf0;
---accent: #e5fffa;
+:root {
+    --blueLight: #d5f1f7;
+    --pinkLight: #f1d5f7;
+    --purple-light: #e4e2f7;
+    --blue: #86B8E7;
+    --purple: #7B60BD;
+    --pink: #CB5FA6;
 }
 
 button {
-    background-color: #bd86ee;
-    font-family: "Josefin Sans", sans-serif;
-    padding: 8px;
-    border-radius: 6px;
     border: none;
 }
 
-button:hover {
-    cursor: pointer;
+input {
+    line-height: 1.75em;
+    border-radius: 0.75em;
+    border: solid var(--purple) 1px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3,h4, p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.lgFlex {
+    @media (min-width: 1024px) { 
+    display: flex; 
+   }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column; 
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.gap-2 {
+    gap: 0.5rem; 
+}
+
+.pt-2 {
+   padding-top: 1rem; 
+}
+
+.pt-4 {
+    padding-top: 1rem; 
+}
+
+.pl-2 {
+    padding-left: 0.5rem; 
+}
+
+.leading-normal {
+    line-height: 1.5;
+}
+
+.tracking-normal {
+    letter-spacing: 0; 
+}
+
+.font-serif {
     font-family: 'Cardo', serif;
 }
 
-
-.cardo-regular {
-    font-family: "Cardo", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.cardo-bold {
-font-family: "Cardo", serif;
-font-weight: 700;
-font-style: normal;
+.bg-gradient-to-r {
+    background: linear-gradient(to right, var(--blueLight), var(--pinkLight));
 }
 
-.cardo-regular-italic {
-font-family: "Cardo", serif;
-font-weight: 400;
-font-style: italic;
-}
-
-.container {
-    margin: 10px;
-}
-  
-
-/* 
-.josefin-sans {
+.font-sans {
     font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: ;
-    font-style: normal;
-  } */
+}
+
+.text-5xl {
+    font-size: 3rem;
+    line-height: 1; 
+}
+
+.p-2 {
+    padding: 0.5rem; 
+}
+
+.p-4 {
+    padding: 1rem; 
+}
+
+.text-center {
+    text-align: center; 
+}
+
+.gap-2 {
+    gap: 0.5rem; 
+}
+
+.items-center {
+    align-items: center; 
+}
+
+.place-content-center {
+    place-content: center; 
+}
+
+.rounded-xl {
+    border-radius: 0.75rem; 
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;     
+}
+
+.text-pink {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+button:hover {
+    background-color: var(--purple);
+}
+
+.bg-purple-light {
+    background-color: var(--purple-light);
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; 
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem; 
+}
+
+.lg-mx-20 {
+    @media (min-width: 1024px) { 
+        margin-left: 5rem;
+    margin-right: 5rem; 
+    }    
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem; 
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem; 
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.m-4 {
+    margin: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem; 
+}
