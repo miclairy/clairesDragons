@@ -177,3 +177,14 @@ button:hover {
 .mt-2 {
     margin-top: 0.5rem; 
 }
+
+.maxWidth {
+    @media (min-width: 1024px) { 
+        width: 75%; 
+       }
+
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    
+}

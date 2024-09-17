@@ -7,19 +7,17 @@
     <p>Powered By openAI</p>
     {% comment %} <p>See your dragon: {{ dragonUrl }}</p> {% endcomment %}
 
-    <div class='lgFlex pt-4'>
-        <form method="POST" class='flex flex-col gap-2 grow pl-2' onsubmit="disableButton()"> 
+    <div class='lgFlex pt-4 gap-2' style='justify-content:space-around'>
+        <form method="POST" class='flex flex-col gap-2 pl-2' onsubmit="disableButton()"> 
             {% csrf_token %}
             {{ dragonForm.as_div }}
-            <button id='generate-btn' class='text-xl font-sans bg-pink rounded-lg m-4 p-4 px-8 hover:bg-purple grow'> Generate </button>
-
+            <button id='generate-btn' class='text-xl font-sans bg-pink rounded-lg m-4 p-4 px-8 hover:bg-purple '> Generate </button>
         </form> 
-        <div class='lg:w-1/2'>
+        <div>
             {% if dragonUrl %}
-                <img  src={{dragonUrl}}></img>
+                <img class='maxWidth' src={{dragonUrl}}></img>
             {% endif %}
         </div>
-
     </div>
 
 </div>
