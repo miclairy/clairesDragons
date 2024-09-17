@@ -186,5 +186,11 @@ button:hover {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
-    
+    object-fit: cover;
+}
+
+.imagDiv {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
 }
