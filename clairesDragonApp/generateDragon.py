@@ -30,11 +30,15 @@ def boolToText(value):
     return value if 'there are' else 'there are not any'
 
 def generate(dragon):
-    response = client.images.generate( 
-        model="dall-e-3",
-        prompt=f"a realistic {dragon.color} dragon with {dragon.legs} legs that breathes {whatDoesItBreathe(dragon.fireBreather, dragon.waterBreather)}, they have {dragon.eyeColor} colored eyes and {dragon.horns} horns and {boolToText(dragon.fins)} fins and {boolToText(dragon.feathers)} feathers. It lives in the {dragon.terrain}",
-        size="1024x1024",
-        quality="standard",
-        n=1,
-    )
-    return response.data[0].url
+    try:
+        response = client.images.generate( 
+            model="dall-e-3",
+            prompt=f"a realistic {dragon.color} dragon with {dragon.legs} legs that breathes {whatDoesItBreathe(dragon.fireBreather, dragon.waterBreather)}, they have {dragon.eyeColor} colored eyes and {dragon.horns} horns and {boolToText(dragon.fins)} fins and {boolToText(dragon.feathers)} feathers. It lives in the {dragon.terrain}",
+            size="1024x1024",
+            quality="standard",
+            n=1,
+        )
+        return response.data[0].url
+    except:
+        print('error generating image')
+        return None

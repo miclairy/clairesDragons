@@ -14,6 +14,7 @@ class Dragon(models.Model):
     wings = models.BooleanField()
     legs = models.IntegerField()
     url = models.CharField(max_length=200)
+    imageKey = models.CharField(max_length=200)
 
     def generate(self):
         self.save()
