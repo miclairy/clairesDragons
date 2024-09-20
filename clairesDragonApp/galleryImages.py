@@ -16,7 +16,7 @@ def getImageUrl(imageKey):
     url = s3_client.generate_presigned_url('get_object',
                                 Params={
                                     'Bucket': BUCKET,
-                                    'Key': imageKey + '.png',
+                                    'Key': imageKey,
                                 },                                  
                                 ExpiresIn=3600)
     print(url)
@@ -24,12 +24,11 @@ def getImageUrl(imageKey):
     #clairesDragons:6n=oBR3# OSKpXoC1JvPAInm
     
 def putImage(url, imageKey):
+    #  s3_client.upload_file(file_dir, BUCKET, imageKey)
     file_dir = download(url, imageKey);
     if file_dir != None:
         with open(file_dir, 'rb') as data:
-            s3_client.upload_fileobj(data, BUCKET, imageKey + '.png')
-            os.remove(file_dir)
-        
+            s3_client.upload_fileobj(data, BUCKET, imageKey)
     
 def download(url, imageKey):
     response = requests.get(url)
