@@ -1,0 +1,12 @@
+{% extends 'clairesDragonApp/base.html' %}
+
+{% block content %}
+    <img src="{{url}}"/>
+
+    {% for dragon in dragons %}
+        <p>{{dragon.name}}</p>
+        {% comment %} <img src={{dragon}}/>  {% endcomment %}
+        {% comment %} <img src='https://oaidalleapiprodscus.blob.core.windows.net/private/org-9pMbbb61J0DDJ6qYQu5oefM4/user-K6Ykb8YL2njruV5ShTW872d3/img-YXVKKhQ3gtpgBhD2uHSRxEzD.png?st=2024-09-13T15%3A57%3A27Z&se=2024-09-13T17%3A57%3A27Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-09-12T23%3A18%3A28Z&ske=2024-09-13T23%3A18%3A28Z&sks=b&skv=2024-08-04&sig=7yhFItqDy1jT/yACXzdZZynEiO2ToA09ubuKStFvbF4%3D'/> {% endcomment %}
+    {% endfor %}
+
+{% endblock %}

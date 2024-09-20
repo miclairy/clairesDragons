@@ -3,7 +3,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from clairesDragonApp.dragonForm import DragonForm
+from clairesDragonApp.galleryImages import galleryImages
 from clairesDragonApp.generateDragon import generate
+
 from .models import Dragon
 
 
@@ -25,3 +27,8 @@ def create(request):
             url = generate(dragon)
             
     return render(request, 'clairesDragonApp/create.html', {'dragonForm': form, 'dragonUrl': url})
+
+def gallery(request):
+    dragons = Dragon.objects.all()
+    url = galleryImages()
+    return render(request, 'clairesDragonApp/gallery.html', {'dragons': dragons, 'url': url})

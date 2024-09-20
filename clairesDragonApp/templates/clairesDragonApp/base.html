@@ -28,7 +28,8 @@
             <a class='rounded-xl text-xl text-pink hover:text-purple' href="{% url 'create' %} "> Create a dragon</a>
             {% include "./icons/dragonIcon.svg" %} 
             <a class="rounded-xl text-xl text-pink hover:text-purple" href="{% url 'about' %}"> About Claire </a>
-            <img src"static/clairesDragonApp/images/purpleDragon.png"/>
+            {% include "./icons/dragonIcon.svg" %} 
+            <a class='rounded-xl text-xl text-pink hover:text-purple' href="{% url 'gallery' %} "> Gallery</a>
         </div>
     </div>
     {% block content %}
