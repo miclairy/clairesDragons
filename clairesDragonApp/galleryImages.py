@@ -9,7 +9,6 @@ config = Config(
         region_name = 'eu-north-1',
         signature_version = 's3v4',
 )
-# set up config for secrets 
 s3_client = boto3.client('s3', config=config)
 
 def getImageUrl(imageKey):
@@ -24,7 +23,6 @@ def getImageUrl(imageKey):
     #clairesDragons:6n=oBR3# OSKpXoC1JvPAInm
     
 def putImage(url, imageKey):
-    #  s3_client.upload_file(file_dir, BUCKET, imageKey)
     file_dir = download(url, imageKey);
     if file_dir != None:
         with open(file_dir, 'rb') as data:
